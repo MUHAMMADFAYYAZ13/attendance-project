@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Remove Record of Student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url(static/homepageimage.jpg); background-repeat: no-repeat; background-size: cover;">
+
+<div class="container">
+  <h1 class="jumbotron bg-primary" style="text-align: center;">Face Recognition Based Attendance System <br><br> Enrollment From</h1>
+  <br>
+  <form class="form-horizontal" action="/remove" method="post" enctype="multipart/form-data">
+
+    <!-- <div class="form-group">
+      <label class="control-label col-sm-2" for="s_name">Name: </label>
+      <dev class="col-sm-10" style="width: 30%;">
+        <input type="text", class="form-control" placeholder="Name" name="student_name" id="s_name">
+      </dev> -->
+
+      <label class="control-label col-sm-2" for="s_id" style="color: aliceblue;">Student ID: </label>
+      <dev class="col-sm-10" style="width: 30%;">
+        <input type="text", class="form-control" placeholder="Student ID" name="student_id" id="s_id">
+      </dev>
+
+      <!-- <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10" style="width: 30%;">          
+        <input type="file" class="form-control" placeholder="Enroll"  name="my_image" id="pwd">
+      </div> -->
+      
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if res %}
+  <h2 style="text-align: center;"> Student ID   : <i> {{res}} </i></h2>
+  <h3 style="text-align: center;"> Student Name   : <i> {{name}} </i></h3>
+  <h4 style="text-align: center;"> Status : <i>{{msg}}</i></h4>
+  <p style="text-align: center;"><img src="{{img_path}}" height="400px" width="400px"></p>
+	
+
+	{% endif %}
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

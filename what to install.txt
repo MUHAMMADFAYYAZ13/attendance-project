@@ -1,0 +1,6 @@
+keras
+tensorflow
+opencv
+face recognition
+dlib
+cmake
